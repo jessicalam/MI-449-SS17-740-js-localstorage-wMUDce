@@ -1,0 +1,9 @@
+.night-mode {
+  background: black;
+  color: white;
+}
+
+.day-mode {
+  background: white;
+  color: black;
+}
