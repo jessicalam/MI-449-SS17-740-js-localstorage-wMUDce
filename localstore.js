@@ -5,22 +5,23 @@ function change () {
     time.setAttribute('class', 'night-mode')
     storageTheme = 'night-mode'
     window.localStorage.setItem('theme', storageTheme)
-  } else if (time.className === 'night-mode') {
+  } else if (time.className === 'night-mode' || null) {
     time.setAttribute('class', 'day-mode')
     storageTheme = 'day-mode'
     window.localStorage.setItem('theme', storageTheme)
-  } else { // this happens when the storage is null
+  } else {
     time.setAttribute('class', 'night-mode')
     storageTheme = 'night-mode'
     window.localStorage.setItem('theme', storageTheme)
   }
 }
-
+console.log('start')
 window.onload = function () {
-  console.log('onload') // goes to this 3rd, reason is because it goes through all of the js before going to the onload, it goes to the change function when it is the button is clicked
+  console.log('onload')
   document.getElementById('button').addEventListener('click', change)
   time.setAttribute('class', storageTheme)
 }
+console.log('afterSet')
 
 window.localStorage.setItem('theme', storageTheme)
 
