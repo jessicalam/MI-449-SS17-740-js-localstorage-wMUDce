@@ -19,8 +19,12 @@ window.onload = function () {
 
 window.localStorage.setItem('storage', storage)
 
+if (window.localStorage.getItem('storage') === undefined) {
+  storage = 'day-mode'
+  window.localStorage.setItem('storage', storage)
+}
 
-//FOR THE COUNTER ELEMENT
+//  FOR THE COUNTER ELEMENT
 var counter = window.localStorage.getItem('counter')
 if (counter === null) {
   counter = 1
@@ -30,4 +34,4 @@ if (counter === null) {
 window.localStorage.setItem('counter', counter)
 
 var counterElement = document.getElementById('counter')
-  counterElement.textContent = 'Counter : ' + counter
+counterElement.textContent = 'Counter : ' + counter
