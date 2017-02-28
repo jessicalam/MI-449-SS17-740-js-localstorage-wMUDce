@@ -10,18 +10,13 @@ function change () {
     storageTheme = 'day-mode'
     window.localStorage.setItem('theme', storageTheme)
   } else {
-    time.setAttribute('class', 'night-mode')
-    storageTheme = 'night-mode'
-    window.localStorage.setItem('theme', storageTheme)
   }
 }
-console.log('start')
+
 window.onload = function () {
-  console.log('onload')
   document.getElementById('button').addEventListener('click', change)
   time.setAttribute('class', storageTheme)
 }
-console.log('afterSet')
 
 window.localStorage.setItem('theme', storageTheme)
 
@@ -36,3 +31,9 @@ window.localStorage.setItem('counter', counter)
 
 var counterElement = document.getElementById('counter')
 counterElement.textContent = 'Counter : ' + counter
+
+/*
+time.setAttribute('class', 'night-mode')
+storageTheme = 'night-mode'
+window.localStorage.setItem('theme', storageTheme)
+*/
