@@ -5,7 +5,7 @@ function change () {
     time.setAttribute('class', 'night-mode')
     storageTheme = 'night-mode'
     window.localStorage.setItem('theme', storageTheme)
-  } else if (time.className === 'night-mode' || null) {
+  } else if (time.className === 'night-mode' || time.className === null) {
     time.setAttribute('class', 'day-mode')
     storageTheme = 'day-mode'
     window.localStorage.setItem('theme', storageTheme)
