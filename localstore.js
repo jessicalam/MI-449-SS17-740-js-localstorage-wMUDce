@@ -1,5 +1,5 @@
 var time = document.getElementById('time')
-var storageTheme = window.localStorage.getItem('storage') || 'day-mode'
+var storageTheme = window.localStorage.getItem('theme') || 'day-mode'
 function change () {
   if (time.className === 'day-mode') {
     time.setAttribute('class', 'night-mode')
